@@ -1,4 +1,9 @@
-# 📰 Topic Modeling on a Million News Headlines
+# Topic Modeling on a Million News Headlines
+
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![gensim](https://img.shields.io/badge/gensim-LDA-6f42c1)](https://radimrehurek.com/gensim/)
+[![NLTK](https://img.shields.io/badge/NLTK-text%20processing-2c7a2c)](https://www.nltk.org/)
+![Method](https://img.shields.io/badge/method-unsupervised-orange)
 
 > Hand a machine a million unlabeled news headlines. Can it figure out — entirely
 > on its own — which ones are about crime, which about the economy, and which
@@ -17,7 +22,7 @@ together.*
 
 ---
 
-## 🤔 What is LDA, in one minute?
+## What is LDA, in one minute?
 
 Latent Dirichlet Allocation rests on a single elegant idea:
 
@@ -31,17 +36,17 @@ a topic, and lets *us* give it a human name afterwards.
 Introduced by Blei, Ng & Jordan in 2003, it remains one of the foundational
 algorithms in topic modeling — and a genuinely fun one to watch work.
 
-## 🔍 What the model found
+## What the model found
 
 Reading the discovered topics like a human would, clear themes jump out:
 
-| Topic | Top words | Human reading |
-|-------|-----------|---------------|
-| 🚨 | police · charge · murder · accuse · shoot | Crime & policing |
-| 🚑 | crash · court · death · jail · search | Accidents & courts |
-| 🏛️ | plan · council · govt · fund · hospital | Government & funding |
-| 📈 | price · rise · market · share · china · coronavirus | Economy & markets |
-| 🗺️ | south · west · adelaide · country · region | Regional news |
+| Theme | Top words |
+|-------|-----------|
+| Crime & policing | police · charge · murder · accuse · shoot |
+| Accidents & courts | crash · court · death · jail · search |
+| Government & funding | plan · council · govt · fund · hospital |
+| Economy & markets | price · rise · market · share · china · coronavirus |
+| Regional news | south · west · adelaide · country · region |
 
 ![Top words per topic](reports/figures/topics_top_words.png)
 
@@ -50,7 +55,7 @@ The project trains **two** flavours of LDA and compares them:
 - **Bag-of-Words** — every word counts equally.
 - **TF-IDF** — distinctive words get more say, surfacing narrower topics.
 
-## 🚀 Quickstart
+## Quickstart
 
 A 25,000-headline sample ships with the repo, so it runs the moment you clone it:
 
@@ -73,7 +78,7 @@ pipeline step by step — with explanations, a live word-cloud render, and a dem
 that classifies a brand-new headline. It renders right here on GitHub, no setup
 needed.
 
-## 🛠️ How it works
+## How it works
 
 ```
 raw headline
@@ -92,7 +97,7 @@ Built with [gensim](https://radimrehurek.com/gensim/) (the LDA engine),
 [NLTK](https://www.nltk.org/) (lemmatization), and
 [wordcloud](https://github.com/amueller/word_cloud) + matplotlib (visuals).
 
-## 📁 Project structure
+## Project structure
 
 ```
 lda-models/
@@ -107,13 +112,13 @@ lda-models/
 └── requirements.txt
 ```
 
-## 🧭 Where to take it next
+## Where to take it next
 
 - Sweep `--num-topics` and use a **coherence score** to pick the best count.
 - Add [pyLDAvis](https://github.com/bmabey/pyLDAvis) for an interactive topic map.
 - Point the same pipeline at your *own* corpus — tweets, reviews, support tickets.
 
-## 📚 Dataset
+## Dataset
 
 [**A Million News Headlines**](https://www.kaggle.com/datasets/therohk/million-headlines)
 — every ABC News headline from 2003–2021. Two columns: `publish_date,headline_text`.
@@ -121,4 +126,4 @@ lda-models/
 ---
 
 *A small project from my topic-modeling days, brought back to life and presented
-properly. Curious about LDA? Clone it and watch the topics emerge.* ✨
+properly. Curious about LDA? Clone it and watch the topics emerge.*
