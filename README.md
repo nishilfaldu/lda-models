@@ -55,8 +55,8 @@ The project trains **two** flavours of LDA and compares them:
 A 25,000-headline sample ships with the repo, so it runs the moment you clone it:
 
 ```bash
-git clone https://github.com/nishilfaldu/lda_models.git
-cd lda_models
+git clone https://github.com/nishilfaldu/lda-models.git
+cd lda-models
 
 pip install -r requirements.txt
 
@@ -95,7 +95,7 @@ Built with [gensim](https://radimrehurek.com/gensim/) (the LDA engine),
 ## 📁 Project structure
 
 ```
-lda_models/
+lda-models/
 ├── notebooks/
 │   └── lda-news-headlines.ipynb   # narrated, interactive walkthrough
 ├── src/
