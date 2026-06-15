@@ -1,0 +1,18 @@
+# The full dataset is downloaded locally, never committed (see data/README.md)
+data/abcnews-date-text.csv
+data/*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# NLTK / model artifacts
+nltk_data/
+*.model
+*.model.*
+
+# OS
+.DS_Store
